@@ -64,6 +64,9 @@ exports.up = function(knex, Promise) {
             tbl
                 .increments()
 
+            tbl
+                .string('ingredient_name', 128)
+            
             tbl 
                 .integer('recipe_id')
                 .unsigned()
@@ -90,18 +93,18 @@ exports.up = function(knex, Promise) {
                 //     PRIMARY KEY (`measurement_id`)
                 //   );
                   
-        .createTable('measurements', tbl => {
-            tbl
-                .increments('measurement_id')
+        // .createTable('measurements', tbl => {
+        //     tbl
+        //         .increments('measurement_id')
 
-            tbl
-                .string('measurement_name')
+        //     tbl
+        //         .string('measurement_name')
 
-            tbl
-                .decimal('amount')
+        //     tbl
+        //         .decimal('amount')
 
             
-        })
+        // })
         })
 };
 
